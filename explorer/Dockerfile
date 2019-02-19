@@ -1,5 +1,5 @@
 FROM kunstmaan/node-multichain
-MAINTAINER Kunstmaan
+MAINTAINER tloriato
 
 RUN apt-get update \
         && apt-get install -q -y python python-dev python-pip sqlite3 libsqlite3-dev \

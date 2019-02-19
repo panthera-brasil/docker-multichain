@@ -1,5 +1,5 @@
 FROM kunstmaan/base-multichain
-MAINTAINER Kunstmaan
+MAINTAINER tloriato
 
 ADD ./runchain.sh /root/runchain.sh
 RUN chmod a+x /root/runchain.sh

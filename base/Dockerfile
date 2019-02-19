@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER Kunstmaan
+MAINTAINER tloriato
 
 ENV DEBIAN_FRONTEND noninteractive
 
