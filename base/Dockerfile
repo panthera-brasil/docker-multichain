@@ -10,9 +10,9 @@ RUN apt-get update \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/* \
         && cd /tmp \
-        && wget http://www.multichain.com/download/multichain-1.0.4.tar.gz \
-        && tar -xvzf multichain-1.0.4.tar.gz \
-        && cd multichain-1.0.4 \
+        && wget https://www.multichain.com/download/multichain-2.0-beta-2.tar.gz \
+        && tar -xvzf multichain-2.0-beta-2.tar.gz \
+        && cd multichain-2.0-beta-2.tar.gz \
         && mv multichaind multichain-cli multichain-util /usr/local/bin \
         && cd /tmp \
         && rm -Rf multichain*
