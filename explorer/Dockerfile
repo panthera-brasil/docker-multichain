@@ -4,6 +4,7 @@ MAINTAINER tloriato
 RUN apt-get update \
         && apt-get install -q -y python python-dev python-pip sqlite3 libsqlite3-dev \
         && pip install pycrypto \
+        && sudo pip install py-ubjson \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/*
 
