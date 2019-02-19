@@ -12,7 +12,7 @@ RUN apt-get update \
         && cd /tmp \
         && wget https://www.multichain.com/download/multichain-2.0-beta-2.tar.gz \
         && tar -xvzf multichain-2.0-beta-2.tar.gz \
-        && cd multichain-2.0-beta-2.tar.gz \
+        && cd multichain-2.0-beta-2 \
         && mv multichaind multichain-cli multichain-util /usr/local/bin \
         && cd /tmp \
         && rm -Rf multichain*
