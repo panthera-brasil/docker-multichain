@@ -11,6 +11,7 @@ services:
         tty: true
         expose:
             - 7557
+            - 2750
             - 8002
         environment:
             CHAINNAME: MyChain
@@ -29,6 +30,8 @@ services:
         expose:
             - 7557
             - 8002
+        ports:
+            - "8002:8002" 
         environment:
             CHAINNAME: MyChain
             NETWORK_PORT: 7557
@@ -49,6 +52,8 @@ services:
             - 2750
             - 7557
             - 8002
+        ports:
+            - "2750:2750"
         environment:
             CHAINNAME: MyChain
             NETWORK_PORT: 7557
