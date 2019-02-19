@@ -1,4 +1,4 @@
-FROM kunstmaan/base-multichain
+FROM tloriato/multichain-base:2.0.2
 MAINTAINER tloriato
 
 ADD ./runchain.sh /root/runchain.sh

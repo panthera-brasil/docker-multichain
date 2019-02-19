@@ -1,4 +1,4 @@
-FROM kunstmaan/node-multichain
+FROM tloriato/multichain-node:2.0.2
 MAINTAINER tloriato
 
 RUN apt-get update \
