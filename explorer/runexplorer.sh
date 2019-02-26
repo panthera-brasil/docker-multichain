@@ -15,7 +15,7 @@ echo "rpcport=$RPC_PORT" >> /root/.multichain/$CHAINNAME/multichain.conf
 echo "Setup /root/explorer.conf"
 cat << EOF > /root/explorer.conf
 port 2750
-host 127.0.0.1
+host 0.0.0.0
 datadir += [{
         "dirname": "~/.multichain/$CHAINNAME",
         "loader": "default",
