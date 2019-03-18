@@ -20,9 +20,63 @@ services:
             RPC_USER: multichainrpc
             RPC_PASSWORD: this-is-insecure-change-it
             RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
-            PARAM_TARGET_BLOCK_SIZE: target-block-time|30
+            # Basic Chain Parameters
+            PARAM_CHAIN_PROTOCOL: chain-protocol|multichain
+            PARAM_CHAIN_DESCRIPTION: chain-description|SDECv0.1
+            PARAM_CHAIN_IS_TESTNET: true
+            PARAM_TARGET_BLOCK_TIME: target-block-time|60
+            PARAM_MAX_BLOCK_SIZE: maximum-block-size|2097152 #2mb
+            PARAM_MAX_CHUNK_SIZE: 10486 # 0.1 mb
+            PARAM_MAX_CHUNK_COUNT: 1 # Maximum size of an off-chain item is 0.1 mb
+            # Global Permissions
             PARAM_ANYONE_CAN_CONNECT: anyone-can-connect|true
+            PARAM_ANYONE_CAN_RECEIVE: anyone-can-receive|true
+            PARAM_ANYONE_CAN_RECEIVE_EMPTY: anyone-can-receive-empty|true
+            PARAM_ANYONE_CAN_CREATE: anyone-can-create|false
+            PARAM_ANYONE_CAN_ISSUE: anyone-can-issue|false
             PARAM_ANYONE_CAN_MINE: anyone-can-mine|true
+            PARAM_ANYONE_CAN_ACTIVATE: anyone-can-activate|false
+            PARAM_ANYONE_CAN_ADMIN: anyone-can-admin:false
+            PARAM_SUPPORT_MINER_PRECHECK: support-miner-precheck|true
+            PARAM_ALLOW_ARBITRARY_OUTPUTS: allow-arbitrary-outputs|false
+            PARAM_ALLOW_P2SH_OUTPUTS: allow-p2sh-outputs|true
+            PARAM_ALLOW_MULTISIG_OUTPUTS: allow-multisig-outputs|true
+            # Consensus Requirements
+            PARAM_SETUP_FIRST_BLOCKS: setup-first-blocks|10
+            PARAM_ADMIN_CONSENSUS_UPGRADE: admin-consensus-upgrade|1
+            PARAM_ADMIN_CONSENSUS_TXFILTER: admin-consensus-txfilter|1
+            PARAM_ADMIN_CONSENSUS_ADMIN: admin-consensus-admin|1
+            PARAM_ADMIN_CONSENSUS_ACTIVATE: admin-consensus-activate|1
+            PARAM_ADMIN_CONSENSUS_MINE: admin-consensus-mine|1
+            PARAM_ADMIN_CONSENSUS_CREATE: admin-consensus-create|1
+            PARAM_ADMIN_CONSENSUS_ISSUE: admin-consensus-issue|1
+            # Defaults for Consensus Related Runtime Parameters
+            PARAM_LOCK_ADMIN_MINE_ROUNDS: lock-admin-mine-rounds|10
+            PARAM_MINING_REQUIRES_PEERS: mining-requires-peers|true
+            PARAM_MINE_EMPTY_ROUNDS: mine-empty-rounds|0
+            PARAM_MINING_TURNOVER: mining-turnover|1
+            # Native Blockchain Currency:
+            PARAM_INITIAL_BLOCK_REWARD: initial-block-reward|0
+            PARAM_FIRST_BLOCK_REWARD: first-block-reward|0
+            PARAM_REWARD_HALVING_INTERVAL: reward-halving-interval|0
+            PARAM_REWARD_SPENDABLE_DELAY: reward-spendable-delay|0
+            PARAM_MINIMUM_PER_OUTPUT: minimum-per-output|0
+            PARAM_MAX_PERPOUTPUT: maximum-per-output|100000000000000
+            PARAM_MINIMUM_OFFCHAIN_FEE: minimum-offchain-fee|0.1
+            PARAM_MINIMUM_RELAY_FEE: minimum-relay-fee|0
+            PARAM_NATIVE_CURRENCY_MULTIPLE: native-currency-multiple|1000
+            # Advanced Mining Parametrs
+            PARAM_SKIP_POW_CHECK: skip-pow-check|false
+            PARAM_POW_MIN_BITS: pow-minimum-bits|7
+            PARAM_TARGET_ADJUST_FREQ: target-adjust-freq|300 # 5min
+            PARAM_ALLOW_MIN_DIFFICULTY_BLOCKS: allow-min-difficulty-blocks|false
+            # Transaction Limits
+            PARAM_ONLY_ACCEPT_STD_TXS: only-accept-std-txs|true
+            PARAM_MAX_STD_TX_SIZE: max-std-tx-size|465554 # Largest Transaction Ever in Bitcoin
+            PARAM_MAX_STD_OP_RETURNS_COUNT: max-std-op-returns-count|0
+            PARAM_MAX_STD_OP_RETURNS_SIZE: max-std-op-return-size|100
+            PARAM_MAX_STD_OP_DROPS_COUNT: max-std-op-drops-count|0
+            PARAM_MAX_STD_ELEMENT_SIZE: max-std-element-size|40000
     slavenode:
         build: ./node
         stdin_open: true
