@@ -59,7 +59,7 @@ services:
             PARAM_INITIAL_BLOCK_REWARD: initial-block-reward|0
             PARAM_FIRST_BLOCK_REWARD: first-block-reward|0
             PARAM_REWARD_HALVING_INTERVAL: reward-halving-interval|52560000
-            PARAM_REWARD_SPENDABLE_DELAY: reward-spendable-delay|0
+            PARAM_REWARD_SPENDABLE_DELAY: reward-spendable-delay|1
             PARAM_MINIMUM_PER_OUTPUT: minimum-per-output|0
             PARAM_MAX_PERPOUTPUT: maximum-per-output|100000000000000
             PARAM_MINIMUM_OFFCHAIN_FEE: minimum-offchain-fee|0.1
