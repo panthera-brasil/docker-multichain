@@ -42,7 +42,7 @@ services:
             PARAM_ALLOW_P2SH_OUTPUTS: allow-p2sh-outputs|true
             PARAM_ALLOW_MULTISIG_OUTPUTS: allow-multisig-outputs|true
             # Consensus Requirements
-            PARAM_SETUP_FIRST_BLOCKS: setup-first-blocks|10
+            PARAM_SETUP_FIRST_BLOCKS: setup-first-blocks|5
             PARAM_ADMIN_CONSENSUS_UPGRADE: admin-consensus-upgrade|1
             PARAM_ADMIN_CONSENSUS_TXFILTER: admin-consensus-txfilter|1
             PARAM_ADMIN_CONSENSUS_ADMIN: admin-consensus-admin|1
@@ -53,7 +53,7 @@ services:
             # Defaults for Consensus Related Runtime Parameters
             PARAM_LOCK_ADMIN_MINE_ROUNDS: lock-admin-mine-rounds|10
             PARAM_MINING_REQUIRES_PEERS: mining-requires-peers|true
-            PARAM_MINE_EMPTY_ROUNDS: mine-empty-rounds|0
+            PARAM_MINE_EMPTY_ROUNDS: mine-empty-rounds|-1
             PARAM_MINING_TURNOVER: mining-turnover|1
             # Native Blockchain Currency:
             PARAM_INITIAL_BLOCK_REWARD: initial-block-reward|0
@@ -67,13 +67,13 @@ services:
             PARAM_NATIVE_CURRENCY_MULTIPLE: native-currency-multiple|1000
             # Advanced Mining Parametrs
             PARAM_SKIP_POW_CHECK: skip-pow-check|false
-            PARAM_POW_MIN_BITS: pow-minimum-bits|7
+            PARAM_POW_MIN_BITS: pow-minimum-bits|10
             PARAM_TARGET_ADJUST_FREQ: target-adjust-freq|300 # 5min
             PARAM_ALLOW_MIN_DIFFICULTY_BLOCKS: allow-min-difficulty-blocks|false
             # Transaction Limits
             PARAM_ONLY_ACCEPT_STD_TXS: only-accept-std-txs|true
             PARAM_MAX_STD_TX_SIZE: max-std-tx-size|465554 # Largest Transaction Ever in Bitcoin
-            PARAM_MAX_STD_OP_RETURNS_COUNT: max-std-op-returns-count|0
+            PARAM_MAX_STD_OP_RETURNS_COUNT: max-std-op-returns-count|10
             PARAM_MAX_STD_OP_RETURNS_SIZE: max-std-op-return-size|100
             PARAM_MAX_STD_OP_DROPS_COUNT: max-std-op-drops-count|0
             PARAM_MAX_STD_ELEMENT_SIZE: max-std-element-size|40000
