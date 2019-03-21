@@ -1,0 +1,18 @@
+{
+  "json": {
+    "razaoSocial": "",
+    "nomeFantasia": "",
+    "identificacao": "",
+    "logradouroEndereco": "",
+    "numeroEndereco": "",
+    "complementoEndereco": "",
+    "bairroEndereco": "",
+    "cidadeEndereco": "",
+    "estadoEndereco": "",
+    "paisEndereco": "",
+    "cepEndereco": "",
+    "email": "",
+    "telefone": "",
+    "enderecoBlockchain": ""
+  }
+}

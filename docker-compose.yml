@@ -72,10 +72,10 @@ services:
             PARAM_ALLOW_MIN_DIFFICULTY_BLOCKS: allow-min-difficulty-blocks|false
             # Transaction Limits
             PARAM_ONLY_ACCEPT_STD_TXS: only-accept-std-txs|true
-            PARAM_MAX_STD_TX_SIZE: max-std-tx-size|465554 # Largest Transaction Ever in Bitcoin
-            PARAM_MAX_STD_OP_RETURNS_COUNT: max-std-op-returns-count|10
-            PARAM_MAX_STD_OP_RETURNS_SIZE: max-std-op-return-size|100
-            PARAM_MAX_STD_OP_DROPS_COUNT: max-std-op-drops-count|0
+            PARAM_MAX_STD_TX_SIZE: max-std-tx-size|4194304 # Largest Transaction Ever in Bitcoin
+            PARAM_MAX_STD_OP_RETURNS_COUNT: max-std-op-returns-count|32
+            PARAM_MAX_STD_OP_RETURNS_SIZE: max-std-op-return-size|2097152
+            PARAM_MAX_STD_OP_DROPS_COUNT: max-std-op-drops-count|5
             PARAM_MAX_STD_ELEMENT_SIZE: max-std-element-size|40000
     slavenode:
         build: ./node

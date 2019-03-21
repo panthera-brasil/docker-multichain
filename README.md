@@ -16,7 +16,14 @@ Use this [docker-compose.yml](https://github.com/tloriato/docker-multichain/blob
 ```
 sudo docker-compose up
 ```
+## Publishing Items
 
+For the time being you have to publish it yourself manually using a terminal, but here's the flow:
+
+1. Create a Stream for Records: ``docker exec docker-multichain_masternode_1 multichain-cli MyChain create stream Registros '{"restrict":"offchain"}' '{"key1":"value1"}'``
+2. Copy the content on the **single-line** file *registroEmpresaAcme.json* and replace the *X* for it: ``docker exec docker-multichain_masternode_1 multichain-cli MyChain publish Registros 'CNPJdaEmpresa?' 'X'``
+1. Create a Stream for Invoices: ``docker exec docker-multichain_masternode_1 multichain-cli MyChain create stream Nickelodeon '{"restrict":"onchain"}' '{"key1":"value1"}'``
+3. Copy the content on the **single-line** file *metaDadoNFAcme.json* and replace the *X* for it, and file *notaFiscalAcme.json* for *Y*: ``docker exec docker-multichain_masternode_1 multichain-cli MyChain publish Nickelodeon 'X' 'Y' offchain)``
 
 ## Persisting your chain
 

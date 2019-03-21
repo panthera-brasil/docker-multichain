@@ -1,0 +1,55 @@
+{
+  "json": {
+    "emissor": "",
+    "identificacaoPrestacaoServico": {
+      "competencia": "",
+      "valorServicos": "",
+      "valorDeducoes": "",
+      "valorPis": "",
+      "valorCofins": "",
+      "valorInss": "",
+      "valorIr": "",
+      "valorCsll": "",
+      "outraRetencoes": "",
+      "valorTotalTributos": "",
+      "descontoIncondicionado": "",
+      "descontoCondicionado": "",
+      "issRetido": "",
+      "responsavelRetencao": "",
+      "itemLista": "",
+      "codigoCnae": "",
+      "codigoTributacaoMunicipio": "",
+      "codigoNBS": "",
+      "discriminacao": "",
+      "exigibilidadeISS": "",
+      "numeroProcesso": "",
+      "regimeEspecialTributacao": "",
+      "optanteSimplesNacional": "",
+      "incentivoFiscal": ""
+    },
+    "tomadorServico": {
+      "identificacao": "",
+      "nif": "",
+      "nomeRazaoSocial": "",
+      "logradouroEndereco": "",
+      "numeroEndereco": "",
+      "complementoEndereco": "",
+      "bairroEndereco": "",
+      "cidadeEndereco": "",
+      "estadoEndereco": "",
+      "paisEndereco": "",
+      "cepEndereco": "",
+      "email": "",
+      "telefone": ""
+    },
+    "intermediarioServico": {
+      "identificacao": "",
+      "nomeRazao": "",
+      "cidade": ""
+    },
+    "construcaoCivil": {
+      "codigoObra": "",
+      "art": ""
+    }
+  }
+}
