@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
-echo "Sleep for 30 seconds so the master node has initialised"
-sleep 30
+echo "Sleep for 8 seconds so the master node has initialised"
+sleep 8
 
 echo "Setup /root/.multichain/multichain.conf"
 mkdir -p /root/.multichain/

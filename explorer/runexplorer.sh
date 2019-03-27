@@ -6,7 +6,7 @@ sleep 10
 echo "Start the chain"
 multichaind -daemon -txindex -shrinkdebugfilesize $CHAINNAME@$MASTER_NODE:$NETWORK_PORT autosubscribe=streams
 
-echo "Sleep for 30 seconds so the slave node has initialised"
+echo "Sleep for 10 seconds so the slave node has initialised"
 sleep 10
 
 echo "Setup /root/.multichain/$CHAINNAME/multichain.conf"

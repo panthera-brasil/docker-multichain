@@ -1,4 +1,4 @@
-FROM tloriato/multichain-node:2.0.2
+FROM tloriato/multichain-node:2.1.0
 MAINTAINER tloriato
 
 RUN apt-get update \
