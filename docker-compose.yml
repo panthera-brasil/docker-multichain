@@ -13,13 +13,15 @@ services:
             - 7557
             - 2750
             - 8002
+        ports:
+            - "8001:8002"
         environment:
             CHAINNAME: MyChain
             NETWORK_PORT: 7557
             RPC_PORT: 8002
             RPC_USER: multichainrpc
             RPC_PASSWORD: this-is-insecure-change-it
-            RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
+            RPC_ALLOW_IP: 0.0.0.0/0
             # Basic Chain Parameters
             PARAM_CHAIN_PROTOCOL: chain-protocol|multichain
             PARAM_CHAIN_DESCRIPTION: chain-description|SDECv0.1

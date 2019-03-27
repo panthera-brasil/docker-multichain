@@ -7,3 +7,5 @@ RUN chmod a+x /root/runchain.sh
 RUN chmod a+x /root/blocknotify.sh
 
 CMD ["/bin/bash", "/root/runchain.sh"]
+
+EXPOSE 8002
