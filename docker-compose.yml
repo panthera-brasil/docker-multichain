@@ -59,9 +59,9 @@ services:
             PARAM_MINE_EMPTY_ROUNDS: mine-empty-rounds|-1
             PARAM_MINING_TURNOVER: mining-turnover|1
             # Native Blockchain Currency:
-            PARAM_INITIAL_BLOCK_REWARD: initial-block-reward|10000 # Remove later
-            PARAM_FIRST_BLOCK_REWARD: first-block-reward|10000  # Remove later
-            PARAM_REWARD_HALVING_INTERVAL: reward-halving-interval|52560000
+            PARAM_INITIAL_BLOCK_REWARD: initial-block-reward|100000000000 # Remove later
+            PARAM_FIRST_BLOCK_REWARD: first-block-reward|100000000000  # Remove later
+            PARAM_REWARD_HALVING_INTERVAL: reward-halving-interval|52560
             PARAM_REWARD_SPENDABLE_DELAY: reward-spendable-delay|5 
             PARAM_MINIMUM_PER_OUTPUT: minimum-per-output|0
             PARAM_MAX_PERPOUTPUT: maximum-per-output|100000000000000

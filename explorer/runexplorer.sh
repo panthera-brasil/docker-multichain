@@ -27,5 +27,5 @@ connect-args = dockerchain.explorer.sqlite
 EOF
 
 echo "Run the explorer"
-python -m Mce.abe --config /root/explorer.conf --commit-bytes 100000 --no-serve
-python -m Mce.abe --config /root/explorer.conf
+python -m Mce.abe --config /root/explorer.conf --commit-bytes 100000 --no-serve  --recent_tx_interval_ms=2000 --catch_up_tx_interval_secs=10
+python -m Mce.abe --config /root/explorer.conf --no-load --recent_tx_interval_ms=2000 --catch_up_tx_interval_secs=10
