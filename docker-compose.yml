@@ -106,11 +106,8 @@ services:
         stdin_open: true
         tty: true
         expose:
-            - 2750
             - 7557
             - 8002
-        ports:
-            - "2750:2750"
         environment:
             CHAINNAME: MyChain
             NETWORK_PORT: 7557
@@ -121,5 +118,21 @@ services:
             MASTER_NODE: masternode
         links:
             - masternode
+            - mysqldb
         depends_on:
             - masternode
+            - mysqldb
+    mysqldb:
+        build: ./mysqldb
+        stdin_open: true
+        tty: true
+        expose:
+            - 3306
+        ports:
+            - "3306:3306"
+        environment:
+            DB_NAME: abe
+            DB_USER: abe
+            DB_PASS: PASSWORD
+            DB_REMOTE_ROOT_NAME: remote-user
+            DB_REMOTE_ROOT_PASS: remote-password
