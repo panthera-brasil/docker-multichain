@@ -1,4 +1,4 @@
-FROM tloriato/multichain-base:2.1.0
+FROM tloriato/multichain-base:2.2.0
 MAINTAINER tloriato
 
 COPY ./runchain.sh /root/runchain.sh

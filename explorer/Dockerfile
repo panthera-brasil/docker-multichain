@@ -1,5 +1,8 @@
-FROM tloriato/multichain-node:2.1.0
+FROM tloriato/multichain-node:2.2.0
 MAINTAINER tloriato
+
+# Use baseimage-docker's init system.
+CMD ["/sbin/my_init"]
 
 RUN apt-get update \
         && apt-get install -q -y python python-dev python-pip python-mysqldb \
@@ -16,7 +19,11 @@ RUN cd /root \
 RUN cd /root/worker-0.0.2 \
     && python setup.py install --user
 
-ADD ./runexplorer.sh /root/runexplorer.sh
-RUN chmod a+x /root/runexplorer.sh
+COPY ./setupexplorer.sh /root/setupexplorer.sh
+RUN chmod a+x /root/setupexplorer.sh
 
-CMD ["/bin/bash", "/root/runexplorer.sh"]
+RUN mkdir /etc/service/worker
+COPY ./worker.sh /etc/service/worker/run
+RUN chmod +x /etc/service/worker/run
+
+#CMD ["/bin/bash", "/root/runexplorer.sh"]

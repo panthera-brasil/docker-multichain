@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM phusion/baseimage:0.11
 MAINTAINER tloriato
 
 ENV DEBIAN_FRONTEND noninteractive
