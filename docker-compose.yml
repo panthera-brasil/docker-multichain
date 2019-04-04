@@ -141,7 +141,7 @@ services:
             MYSQL_ROOT_PASSWORD: 'PASSWORD'
         
         # Where our data will be persisted
-        volumes:
-        - my-db:/var/lib/mysql
-volumes:
-  my-db:
+        # volumes:
+        # - my-db:/var/lib/mysql
+# volumes:
+  # my-db:
