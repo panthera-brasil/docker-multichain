@@ -16,12 +16,9 @@ RUN cd /root \
 RUN cd /root/worker-master \
     && python setup.py install --user
 
-COPY ./setupexplorer.sh /etc/my_init.d/setupexplorer.sh
-RUN chmod +x /etc/my_init.d/setupexplorer.sh
+COPY ./setupexplorer.sh /root/setupexplorer.sh
+RUN chmod a+x /root/setupexplorer.sh
 
-RUN mkdir /etc/service/worker
-COPY ./worker.sh /etc/service/worker/run
-RUN chmod +x /etc/service/worker/run
+EXPOSE 2750
 
-# Use baseimage-docker's init system.
-CMD ["/sbin/my_init"]
+CMD ["/bin/bash", "/root/setupexplorer.sh"]
