@@ -9,11 +9,11 @@ RUN apt-get update \
         && rm -rf /var/lib/apt/lists/*
 
 RUN cd /root \
-    && wget https://github.com/sdec-brasil/worker/archive/master.tar.gz \
-    && tar -xvzf master.tar.gz \
-    && rm -Rf master.tar.gz
+    && wget https://github.com/sdec-brasil/worker/archive/1.0.1.tar.gz \
+    && tar -xvzf 1.0.1.tar.gz \
+    && rm -Rf 1.0.1.tar.gz
 
-RUN cd /root/worker-master \
+RUN cd /root/worker-1.0.1 \
     && python setup.py install --user
 
 COPY ./setupexplorer.sh /root/setupexplorer.sh
