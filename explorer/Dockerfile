@@ -9,16 +9,19 @@ RUN apt-get update \
         && rm -rf /var/lib/apt/lists/*
 
 RUN cd /root \
-    && wget https://github.com/sdec-brasil/worker/archive/1.0.1.tar.gz \
-    && tar -xvzf 1.0.1.tar.gz \
-    && rm -Rf 1.0.1.tar.gz
+    && wget https://github.com/sdec-brasil/worker/archive/connect_to_dashboard.tar.gz \
+    && tar -xvzf connect_to_dashboard.tar.gz \
+    && rm -Rf connect_to_dashboard.tar.gz
 
-RUN cd /root/worker-1.0.1 \
+RUN cd /root/worker-connect_to_dashboard \
     && python setup.py install --user
 
-COPY ./setupexplorer.sh /root/setupexplorer.sh
-RUN chmod a+x /root/setupexplorer.sh
+COPY ./setupexplorer.sh /etc/my_init.d/setupexplorer.sh
+RUN chmod +x /etc/my_init.d/setupexplorer.sh
 
-EXPOSE 2750
+RUN mkdir /etc/service/worker
+COPY ./worker.sh /etc/service/worker/run
+RUN chmod +x /etc/service/worker/run
 
-CMD ["/bin/bash", "/root/setupexplorer.sh"]
+# Use baseimage-docker's init system.
+CMD ["/sbin/my_init"]
