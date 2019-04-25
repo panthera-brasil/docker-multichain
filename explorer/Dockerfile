@@ -9,11 +9,11 @@ RUN apt-get update \
         && rm -rf /var/lib/apt/lists/*
 
 RUN cd /root \
-    && wget https://github.com/sdec-brasil/worker/archive/connect_to_dashboard.tar.gz \
-    && tar -xvzf connect_to_dashboard.tar.gz \
-    && rm -Rf connect_to_dashboard.tar.gz
+    && wget https://github.com/sdec-brasil/worker/archive/v1.0.2.tar.gz \
+    && tar -xvzf v1.0.2.tar.gz \
+    && rm -Rf v1.0.2.tar.gz
 
-RUN cd /root/worker-connect_to_dashboard \
+RUN cd /root/worker-1.0.2 \
     && python setup.py install --user
 
 COPY ./setupexplorer.sh /etc/my_init.d/setupexplorer.sh
