@@ -9,11 +9,11 @@ RUN apt-get update \
         && rm -rf /var/lib/apt/lists/*
 
 RUN cd /root \
-    && wget https://github.com/sdec-brasil/worker/archive/v1.0.3.tar.gz \
-    && tar -xvzf v1.0.3.tar.gz \
-    && rm -Rf v1.0.3.tar.gz
+    && wget https://github.com/sdec-brasil/worker/archive/handling_partial_receipts.tar.gz \
+    && tar -xvzf handling_partial_receipts.tar.gz \
+    && rm -Rf handling_partial_receipts.tar.gz
 
-RUN cd /root/worker-1.0.3 \
+RUN cd /root/worker-handling_partial_receipts \
     && python setup.py install --user
 
 COPY ./setupexplorer.sh /etc/my_init.d/setupexplorer.sh

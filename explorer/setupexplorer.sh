@@ -4,8 +4,8 @@ echo "Sleep for 10 seconds so the master node has initialised"
 sleep 10
 
 echo "Start the chain"
-# multichaind -daemon -txindex=1 -shrinkdebugfilesize $CHAINNAME@$MASTER_NODE:$NETWORK_PORT -autosubscribe=streams
-multichaind -daemon -txindex=1 -shrinkdebugfilesize $CHAINNAME@$MASTER_NODE:$NETWORK_PORT -autosubscribe=streams 
+multichaind -daemon -txindex=1 -shrinkdebugfilesize $CHAINNAME@$MASTER_NODE:$NETWORK_PORT -autosubscribe=streams
+# multichaind -daemon -txindex=1 -shrinkdebugfilesize $CHAINNAME@$MASTER_NODE:$NETWORK_PORT 
 
 echo "Sleep for 10 seconds so the slave node has initialised"
 sleep 10 
