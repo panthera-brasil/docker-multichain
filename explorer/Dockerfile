@@ -19,9 +19,8 @@ RUN cd /root/worker-handling_partial_receipts \
 COPY ./setupexplorer.sh /etc/my_init.d/setupexplorer.sh
 RUN chmod +x /etc/my_init.d/setupexplorer.sh
 
-RUN mkdir /etc/service/worker
-COPY ./worker.sh /etc/service/worker/run
-RUN chmod +x /etc/service/worker/run
+ADD ./worker.sh /root/runexplorer.sh
+RUN chmod +x /root/runexplorer.sh
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
