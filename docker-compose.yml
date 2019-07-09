@@ -27,8 +27,9 @@ services:
             PARAM_CHAIN_IS_TESTNET: chain-is-testnet|true
             PARAM_TARGET_BLOCK_TIME: target-block-time|60
             PARAM_MAX_BLOCK_SIZE: maximum-block-size|2097152 #2mb
-            PARAM_MAX_CHUNK_SIZE: 10486 # 0.1 mb
-            PARAM_MAX_CHUNK_COUNT: 1 # Maximum size of an off-chain item is 0.1 mb
+            PARAM_MAX_CHUNK_SIZE: maximum-chunk-size|10486 # 0.1 mb
+            PARAM_MAX_CHUNK_COUNT: maximum-chunk-count|1 # Maximum size of an off-chain item is 0.1 mb
+            PARAM_ROOT_STREAM_NAME: root-stream-name|events
             # Global Permissions
             PARAM_ANYONE_CAN_CONNECT: anyone-can-connect|true
             PARAM_ANYONE_CAN_RECEIVE: anyone-can-receive|false
