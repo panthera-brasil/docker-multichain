@@ -31,12 +31,12 @@ services:
             PARAM_MAX_CHUNK_COUNT: 1 # Maximum size of an off-chain item is 0.1 mb
             # Global Permissions
             PARAM_ANYONE_CAN_CONNECT: anyone-can-connect|true
-            PARAM_ANYONE_CAN_RECEIVE: anyone-can-receive|true
-            PARAM_ANYONE_CAN_SEND: anyone-can-send|true
-            PARAM_ANYONE_CAN_RECEIVE_EMPTY: anyone-can-receive-empty|true
+            PARAM_ANYONE_CAN_RECEIVE: anyone-can-receive|false
+            PARAM_ANYONE_CAN_SEND: anyone-can-send|false
+            PARAM_ANYONE_CAN_RECEIVE_EMPTY: anyone-can-receive-empty|false
             PARAM_ANYONE_CAN_CREATE: anyone-can-create|false
             PARAM_ANYONE_CAN_ISSUE: anyone-can-issue|false
-            PARAM_ANYONE_CAN_MINE: anyone-can-mine|true
+            PARAM_ANYONE_CAN_MINE: anyone-can-mine|false
             PARAM_ANYONE_CAN_ACTIVATE: anyone-can-activate|false
             PARAM_ANYONE_CAN_ADMIN: anyone-can-admin:false
             PARAM_SUPPORT_MINER_PRECHECK: support-miner-precheck|true
@@ -58,8 +58,8 @@ services:
             PARAM_MINE_EMPTY_ROUNDS: mine-empty-rounds|-1
             PARAM_MINING_TURNOVER: mining-turnover|1
             # Native Blockchain Currency:
-            PARAM_INITIAL_BLOCK_REWARD: initial-block-reward|100000000000 # Remove later
-            PARAM_FIRST_BLOCK_REWARD: first-block-reward|100000000000  # Remove later
+            PARAM_INITIAL_BLOCK_REWARD: initial-block-reward|0 # Remove later
+            PARAM_FIRST_BLOCK_REWARD: first-block-reward|-1  # Remove later
             PARAM_REWARD_HALVING_INTERVAL: reward-halving-interval|52560
             PARAM_REWARD_SPENDABLE_DELAY: reward-spendable-delay|5 
             PARAM_MINIMUM_PER_OUTPUT: minimum-per-output|0
