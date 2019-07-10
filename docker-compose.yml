@@ -25,18 +25,19 @@ services:
             PARAM_CHAIN_PROTOCOL: chain-protocol|multichain
             PARAM_CHAIN_DESCRIPTION: chain-description|SDECv0.1
             PARAM_CHAIN_IS_TESTNET: chain-is-testnet|true
-            PARAM_TARGET_BLOCK_TIME: target-block-time|60
-            PARAM_MAX_BLOCK_SIZE: maximum-block-size|2097152 #2mb
-            PARAM_MAX_CHUNK_SIZE: 10486 # 0.1 mb
-            PARAM_MAX_CHUNK_COUNT: 1 # Maximum size of an off-chain item is 0.1 mb
+            PARAM_TARGET_BLOCK_TIME: target-block-time|30
+            PARAM_MAX_BLOCK_SIZE: maximum-block-size|2097152
+            PARAM_MAX_CHUNK_SIZE: maximum-chunk-size|10486
+            PARAM_MAX_CHUNK_COUNT: maximum-chunk-count|1024
+            PARAM_ROOT_STREAM_NAME: root-stream-name|events
             # Global Permissions
             PARAM_ANYONE_CAN_CONNECT: anyone-can-connect|true
-            PARAM_ANYONE_CAN_RECEIVE: anyone-can-receive|true
-            PARAM_ANYONE_CAN_SEND: anyone-can-send|true
-            PARAM_ANYONE_CAN_RECEIVE_EMPTY: anyone-can-receive-empty|true
+            PARAM_ANYONE_CAN_RECEIVE: anyone-can-receive|false
+            PARAM_ANYONE_CAN_SEND: anyone-can-send|false
+            PARAM_ANYONE_CAN_RECEIVE_EMPTY: anyone-can-receive-empty|false
             PARAM_ANYONE_CAN_CREATE: anyone-can-create|false
             PARAM_ANYONE_CAN_ISSUE: anyone-can-issue|false
-            PARAM_ANYONE_CAN_MINE: anyone-can-mine|true
+            PARAM_ANYONE_CAN_MINE: anyone-can-mine|false
             PARAM_ANYONE_CAN_ACTIVATE: anyone-can-activate|false
             PARAM_ANYONE_CAN_ADMIN: anyone-can-admin:false
             PARAM_SUPPORT_MINER_PRECHECK: support-miner-precheck|true
@@ -58,14 +59,14 @@ services:
             PARAM_MINE_EMPTY_ROUNDS: mine-empty-rounds|-1
             PARAM_MINING_TURNOVER: mining-turnover|1
             # Native Blockchain Currency:
-            PARAM_INITIAL_BLOCK_REWARD: initial-block-reward|100000000000 # Remove later
-            PARAM_FIRST_BLOCK_REWARD: first-block-reward|100000000000  # Remove later
+            PARAM_INITIAL_BLOCK_REWARD: initial-block-reward|0 # Remove later
+            PARAM_FIRST_BLOCK_REWARD: first-block-reward|-1  # Remove later
             PARAM_REWARD_HALVING_INTERVAL: reward-halving-interval|52560
             PARAM_REWARD_SPENDABLE_DELAY: reward-spendable-delay|5 
             PARAM_MINIMUM_PER_OUTPUT: minimum-per-output|0
             PARAM_MAX_PERPOUTPUT: maximum-per-output|100000000000000
-            PARAM_MINIMUM_OFFCHAIN_FEE: minimum-offchain-fee|1
-            PARAM_MINIMUM_RELAY_FEE: minimum-relay-fee|20 # R$0.01 for 500 bytes
+            PARAM_MINIMUM_OFFCHAIN_FEE: minimum-offchain-fee|0
+            PARAM_MINIMUM_RELAY_FEE: minimum-relay-fee|0 #
             PARAM_NATIVE_CURRENCY_MULTIPLE: native-currency-multiple|1000
             # Advanced Mining Parametrs
             PARAM_SKIP_POW_CHECK: skip-pow-check|false
