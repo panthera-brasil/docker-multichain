@@ -11,7 +11,7 @@ RUN apt-get update \
 RUN cd /root \
     && git clone https://github.com/sdec-brasil/worker/ \
     && cd worker \
-    && git checkout master \
+    && git checkout new-structure \
     && python setup.py install --user
 
 COPY ./setupexplorer.sh /etc/my_init.d/setupexplorer.sh
