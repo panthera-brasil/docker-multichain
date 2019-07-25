@@ -117,9 +117,11 @@ services:
         links:
             - masternode
             - mysqldb
+            - redis
         depends_on:
             - masternode
             - mysqldb
+            - redis
     mysqldb:
         image: mysql:5.7
         restart: always
@@ -137,6 +139,14 @@ services:
             MYSQL_PASSWORD: 'PASSWORD'
             # Password for root access
             MYSQL_ROOT_PASSWORD: 'PASSWORD'
+    redis:
+        image: redis:5.0-alpine
+        restart: always
+        ports:
+            - '6379:6379'
+        expose:
+            - '6379'
+        
         
         # Where our data will be persisted
         # volumes:
