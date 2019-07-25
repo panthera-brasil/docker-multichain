@@ -120,11 +120,11 @@ services:
         links:
             - masternode
             - mysqldb
-            - redis
+            - redis-db
         depends_on:
             - masternode
             - mysqldb
-            - redis
+            - redis-db
     mysqldb:
         image: mysql:5.7
         restart: always
