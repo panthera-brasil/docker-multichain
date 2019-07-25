@@ -24,3 +24,7 @@ datadir += [{
 dbtype = MySQLdb
 connect-args {"user":"abe","db":"abe","passwd":"PASSWORD","host":"mysqldb","port":3306}
 EOF
+
+echo "redisPort = $REDIS_PORT" >> /root/explorer.conf
+echo "redisHost = $REDIS_HOST" >> /root/explorer.conf
+echo "redisDb = $REDIS_DB" >> /root/explorer.conf

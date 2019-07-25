@@ -114,6 +114,9 @@ services:
             RPC_PASSWORD: this-is-insecure-change-it
             RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
             MASTER_NODE: masternode
+            REDIS_PORT: 6379
+            REDIS_HOST: localhost
+            REDIS_DB: 0
         links:
             - masternode
             - mysqldb
