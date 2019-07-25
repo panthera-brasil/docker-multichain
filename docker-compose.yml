@@ -114,12 +114,17 @@ services:
             RPC_PASSWORD: this-is-insecure-change-it
             RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
             MASTER_NODE: masternode
+            REDIS_PORT: 6379
+            REDIS_HOST: redis-db
+            REDIS_DB: 0
         links:
             - masternode
             - mysqldb
+            - redis-db
         depends_on:
             - masternode
             - mysqldb
+            - redis-db
     mysqldb:
         image: mysql:5.7
         restart: always
@@ -137,6 +142,14 @@ services:
             MYSQL_PASSWORD: 'PASSWORD'
             # Password for root access
             MYSQL_ROOT_PASSWORD: 'PASSWORD'
+    redis-db:
+        image: redis:5.0-alpine
+        restart: always
+        ports:
+            - '6379:6379'
+        expose:
+            - '6379'
+        
         
         # Where our data will be persisted
         # volumes:
