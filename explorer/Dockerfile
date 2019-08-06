@@ -1,18 +1,10 @@
-FROM tloriato/multichain-node:2.2.0
+FROM tloriato/base-explorer:2.2.0
 MAINTAINER tloriato
-
-RUN apt-get update \
-        && apt-get install -q -y python python-dev python-pip python-mysqldb git \
-        && pip install pycrypto \
-        && pip install redis \
-        && pip install py-ubjson \
-        && apt-get clean \
-        && rm -rf /var/lib/apt/lists/*
 
 RUN cd /root \
     && git clone https://github.com/sdec-brasil/worker/ \
     && cd worker \
-    && git checkout master \
+    && git checkout certificate-structure \
     && python setup.py install --user
 
 COPY ./setupexplorer.sh /etc/my_init.d/setupexplorer.sh
