@@ -36,7 +36,7 @@ services:
             PARAM_ANYONE_CAN_SEND: anyone-can-send|true
             PARAM_ANYONE_CAN_RECEIVE_EMPTY: anyone-can-receive-empty|true
             PARAM_ANYONE_CAN_CREATE: anyone-can-create|false
-            PARAM_ANYONE_CAN_ISSUE: anyone-can-issue|false
+            PARAM_ANYONE_CAN_ISSUE: anyone-can-issue|true
             PARAM_ANYONE_CAN_MINE: anyone-can-mine|false
             PARAM_ANYONE_CAN_ACTIVATE: anyone-can-activate|false
             PARAM_ANYONE_CAN_ADMIN: anyone-can-admin:false
