@@ -4,7 +4,7 @@ MAINTAINER tloriato
 RUN cd /root \
     && git clone https://github.com/sdec-brasil/worker/ \
     && cd worker \
-    && git checkout certificate-structure \
+    && git checkout bug-band-aid \
     && python setup.py install --user
 
 COPY ./setupexplorer.sh /etc/my_init.d/setupexplorer.sh
